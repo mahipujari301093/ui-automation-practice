@@ -1,5 +1,6 @@
 package browserlaunch;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Launch_Browser_Login {
 
     public static void main(String[]args) throws InterruptedException {
-
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
@@ -25,12 +25,6 @@ public class Launch_Browser_Login {
         driver.quit();
 
 
-
-
-
     }
-
-
-
 
 }
