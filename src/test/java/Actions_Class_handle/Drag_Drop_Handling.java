@@ -26,12 +26,6 @@ public class Drag_Drop_Handling {
         Thread.sleep(3000);
         driver.quit();
 
-
-
-
-
-
-
     }
 
 
