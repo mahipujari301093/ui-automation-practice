@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MyTestSuite">
-    <test name="MyTests">
+
+<suite name="Listener Suite">
+
+    <!-- Step 1: Register Listener -->
+    <listeners>
+        <listener class-name="testng.ListenerTestCase2"/>
+    </listeners>
+
+    <!-- Step 2: Define Test -->
+    <test name="Listener Test Execution">
         <classes>
-            <!-- Add all your test classes here -->
-            <class name="tests.AnnotationTestCase"/>
+            <class name="testng.ListenerTestCase"/>
         </classes>
     </test>
+
 </suite>
