@@ -34,6 +34,9 @@ public class ArrowDownKey {
 }
 
 /*
-we have done multiple operation hence we used build().perform()
+
+When we perform multiple actions using the Actions class, we use build() to combine all actions into one sequence and perform() to execute that sequence.
+
+
 
  */

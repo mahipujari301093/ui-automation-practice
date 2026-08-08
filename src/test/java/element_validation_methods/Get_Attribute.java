@@ -18,14 +18,16 @@ public class Get_Attribute {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     WebElement name = driver.findElement(By.name("firstname"));
-    name.sendKeys("Vishal");
 
+        name.sendKeys("John");
 
-    String enteredText = name.getAttribute("value");
-    System.out.println(enteredText);
+        String enteredText = name.getAttribute("value");
 
-    Thread.sleep(2000);
-    driver.quit();
+        System.out.println(enteredText);
+
+        Thread.sleep(2000);
+
+        driver.quit();
 
 
     }

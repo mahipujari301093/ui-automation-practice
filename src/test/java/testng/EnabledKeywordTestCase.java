@@ -26,27 +26,19 @@ public class EnabledKeywordTestCase {
 
 🔹 What is enabled in TestNG?
 
-enabled = true → Test case will execute (default)
+enabled is used to enable or disable a test method from execution.
 
-enabled = false → Test case will be skipped
+⭐ Easy to remember
 
-👉 It is mainly used when:
+enabled = true → Test executes ✅
+enabled = false → Test is skipped ⏭️
 
-Test case is under development
 
-Test case has a known bug
+Why do we use it?
 
-You temporarily want to skip a test
+Suppose you have 10 test cases, but one test case is currently not required or has an issue.
 
-🔹 Interview Question ⭐
+Instead of deleting it, you can disable it:
 
-Q: Does priority work if enabled = false?
-A: ❌ No. TestNG skips the test completely.
-
-@Test(priority = 2, enabled = false)
-public void addToCart()
-{
-    System.out.println("Add To Cart");
-}
 
  */

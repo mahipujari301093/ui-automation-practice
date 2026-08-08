@@ -55,7 +55,13 @@ getWindowHandles() → returns ALL open window IDs
 Set<String> allWindows = driver.getWindowHandles();
 
 What Iterator Does
-we use an Iterator to traverse each window ID one by one.
-The next() method moves the pointer forward and returns the next window ID
+Iterator → an interface in Java -> Iterator helps us to traverse window IDs one by one
+next() → a method of the Iterator interface -> retrieves the next window ID.
+
+
+
+To handle multiple windows, Selenium gets the unique IDs of all open windows using getWindowHandles() and uses switchTo().window() to move Selenium's focus to the required window.
+
+
 
  */

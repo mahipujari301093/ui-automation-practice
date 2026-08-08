@@ -23,8 +23,8 @@ public class Drag_Drop_Handling {
         WebElement drop = driver.findElement(By.id("droppable"));
         act.dragAndDrop(drag,drop).perform();
 
-        Thread.sleep(3000);
-        driver.quit();
+      //  Thread.sleep(3000);
+     //   driver.quit();
 
     }
 

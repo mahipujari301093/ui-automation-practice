@@ -1,6 +1,5 @@
 package testng;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DependsOnMethodsTestCase {
@@ -38,7 +37,24 @@ public class DependsOnMethodsTestCase {
 
 Correct Statement (Interview Ready ⭐)
 
-If login method passes → dependent method executes
-If login method fails → dependent method is SKIPPED
+dependsOnMethods is used in TestNG when one test method depends on another test method to execute first.
+
+login()          ❌ Failed
+   ↓
+searchProduct()  ⏭ Skipped
+   ↓
+addToCart()      ⏭ Skipped
+   ↓
+logout()         ⏭ Skipped
+
+Why do we use dependsOnMethods?
+
+We use dependsOnMethods when one test cannot be performed unless another test is completed successfully.
+
+
+In my example, each test depends on the previous test. If login() fails, the remaining dependent tests will be skipped; only when login() passes will searchProduct() execute, followed by addToCart() and logout().
+
+
+
 
  */

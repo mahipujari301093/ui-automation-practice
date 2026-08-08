@@ -1,6 +1,5 @@
 package pop_upHandling;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,10 +18,11 @@ public class AlertPopup_Accept {
 
         driver.findElement(By.xpath("//*[@onclick='jsAlert()']")).click();
         Thread.sleep(2000);
-        Alert a = driver.switchTo().alert();
+        driver.switchTo().alert().accept();
 
-        // Click OK
-        a.accept();
+
+        String result = driver.findElement(By.id("result")).getText();
+        System.out.println("Result after clicking OK: " + result);
 
         Thread.sleep(2000);
         driver.quit();
@@ -34,7 +34,7 @@ public class AlertPopup_Accept {
 /*
 🧠 How Selenium Handles Alerts
 Selenium uses the Alert interface:
-Alert alert = driver.switchTo().alert();
+driver.switchTo().alert().accept();
 
 | Method       | Purpose                  |
 | ------------ | ------------------------ |

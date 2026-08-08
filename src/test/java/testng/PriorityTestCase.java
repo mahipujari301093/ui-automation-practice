@@ -56,6 +56,7 @@ What is priority in TestNG?
 priority is used to control the execution order of @Test methods
 Lower number → executes first
 Higher number → executes later
+negative number → -1 (executes before 0)
 
 
  */

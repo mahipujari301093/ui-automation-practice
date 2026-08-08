@@ -16,8 +16,8 @@ public class GetMethodsExample {
         driver.get("https://demoqa.com/text-box");
 
         // 1️⃣ getCurrentUrl()
-        String currentUrl = driver.getCurrentUrl();
-        System.out.println("Current URL: " + currentUrl);
+        String Url = driver.getCurrentUrl();
+        System.out.println("Current URL: " + Url);
 
         // 2️⃣ getTitle()
         String title = driver.getTitle();

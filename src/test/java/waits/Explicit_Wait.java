@@ -47,6 +47,7 @@ public class Explicit_Wait {
 /*
 
 🔍 How Explicit Wait Works in THIS Code
+
 wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("firstName")));
 
 Selenium does this internally:

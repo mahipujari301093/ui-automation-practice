@@ -39,4 +39,23 @@ public class ListenerTestCase {
 👉 This class contains only @Test methods
 👉 No listener logic here
 
+
+
+
+1. What is a TestNG Listener?
+
+⭐ Interview Definition
+
+Important: The listener itself doesn't automatically take screenshots. We write the screenshot/report code inside methods like onTestFailure().
+Inside onTestFailure(), we usually write the code that should execute when a test fails.
+
+
+Listener → Monitors test execution and reacts to test events like pass, fail, and skip.
+
+ITestListener
+
+ITestListener is an interface that provides methods to track test execution events.
+
+
+
  */

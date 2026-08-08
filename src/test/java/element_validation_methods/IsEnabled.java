@@ -17,7 +17,7 @@ public class IsEnabled {
         driver.get("https://www.amazon.in/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        WebElement searchBox =driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         boolean isEnabled = searchBox.isEnabled();
         System.out.println(isEnabled);
         driver.quit();

@@ -44,4 +44,24 @@ When Selenium cannot do something directly, we use JavaScriptExecutor to do it.
 
 JavascriptExecutor is an interface in Selenium used to execute JavaScript code inside the browser
 when Selenium methods are not sufficient.
+
+
+
+Meaning:
+
+JavascriptExecutor → Selenium interface
+(JavascriptExecutor) driver → Cast WebDriver to JavascriptExecutor
+executeScript() → Executes JavaScript code
+window.scrollBy(0,500) → Scrolls the page 500 pixels down
+
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+We cast the WebDriver reference to JavascriptExecutor so we can use the executeScript() method to run JavaScript in the browser.
+
+Even shorter for notes:
+
+Downcasting: Convert WebDriver reference to JavascriptExecutor to access executeScript() method of JavascriptExecutor interface.
+
+
+
  */

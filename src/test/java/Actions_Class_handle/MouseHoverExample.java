@@ -26,8 +26,8 @@ public class MouseHoverExample {
         // Perform mouse hover action
         act.moveToElement(mainItem).perform();
 
-        Thread.sleep(3000);
-        driver.quit();
+      //  Thread.sleep(4000);
+      //  driver.quit();
 
     }
 

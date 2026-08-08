@@ -13,11 +13,15 @@ public class Copy_Paste {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
         driver.get("https://demo.guru99.com/test/newtours/register.php");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        
+        
+        
 
-        driver.findElement(By.name("firstName")).sendKeys("Copy paste example");
+        driver.findElement(By.name("firstName")).sendKeys("Vishal");
 
         Actions act = new Actions(driver);
 
@@ -28,13 +32,13 @@ public class Copy_Paste {
         act.sendKeys(Keys.TAB).keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
 
         Thread.sleep(3000);
-        driver.quit();
+        //driver.quit();
 
     }
 }
 
 /*
-❓ How do you perform copy-paste in Selenium?
+❓How do you perform copy-paste in Selenium?
 Using Actions class with keyDown() and keyUp()
 To press and hold the key we used -> keyDown
 To release the key we used -> keyUp

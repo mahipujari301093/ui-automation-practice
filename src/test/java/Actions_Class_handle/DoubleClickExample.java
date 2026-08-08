@@ -19,19 +19,16 @@ public class DoubleClickExample {
 
         // Locate the double click button
 
-        WebElement doubleClickBtn = driver.findElement(By.id("doubleClickBtn"));
+        WebElement Clickbutton = driver.findElement(By.id("doubleClickBtn"));
 
         // Create Actions class object
         Actions act = new Actions(driver);
 
         // Perform double click action
-        act.doubleClick(doubleClickBtn).perform();
+        act.doubleClick(Clickbutton).perform();
 
-        Thread.sleep(3000);
-         driver.quit();
-
-
-
+       Thread.sleep(3000);
+       driver.quit();
 
 
 

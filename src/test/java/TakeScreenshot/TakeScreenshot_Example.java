@@ -21,7 +21,7 @@ public class TakeScreenshot_Example {
         TakesScreenshot ts = (TakesScreenshot) driver;
 
         // Step 2: Use getScreenshotAs() method to capture screenshot ,Take screenshot and store in temp file
-         File source  = ts.getScreenshotAs(OutputType.FILE);
+         File tempfile = ts.getScreenshotAs(OutputType.FILE);
 
         // Step 3: Specify the destination where we want to save the screenshot
         String path = System.getProperty("user.dir") + "\\Screenshots\\google.png";
@@ -30,7 +30,7 @@ public class TakeScreenshot_Example {
         File file = new File(path);
 
         // Step 4: Copy the screenshot from source to destination
-        FileHandler.copy(source, file);
+        FileHandler.copy(tempfile, file);
 
         Thread.sleep(3000);
         driver.quit();

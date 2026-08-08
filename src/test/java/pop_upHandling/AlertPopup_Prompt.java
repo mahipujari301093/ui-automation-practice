@@ -1,6 +1,5 @@
 package pop_upHandling;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,25 +18,19 @@ public class AlertPopup_Prompt {
         driver.findElement(By.xpath("//*[@onclick='jsPrompt()']")).click();
 
         // Switch to alert
-        Alert alert = driver.switchTo().alert();
+        driver.switchTo().alert().sendKeys("Hello Selenium");
 
-        // Enter text
-        alert.sendKeys("Hello Selenium");
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Click OK button
-        alert.accept();
+        driver.switchTo().alert().accept();
+
+        String result = driver.findElement(By.id("result")).getText();
+        System.out.println("Result after clicking OK: " + result);
 
         Thread.sleep(2000);
         driver.quit();
-
-
-
-
-
-
-
 
 
     }

@@ -1,6 +1,5 @@
 package dropdown_handling;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,21 +10,33 @@ import java.time.Duration;
 
 public class With_Select_Tag1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("https://www.opencart.com/index.php?route=account/register");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://practice.expandtesting.com/dropdown?utm_source=chatgpt.com");
         driver.manage().window().maximize();
-        System.out.println("Page title is: " + driver.getTitle());
 
-        WebElement country = driver.findElement(By.id("input-country"));
-        Select sel = new Select(country);
+        // Handling country dropdown with Select class
+        WebElement dropdown = driver.findElement(By.id("country"));
+        Select sel = new Select(dropdown);
+        sel.selectByVisibleText("Brazil");
 
-        sel.selectByVisibleText("Finland");
+        // Handling elements per page dropdown with Select class
+        WebElement dob = driver.findElement(By.id("elementsPerPageSelect"));
+        Select sel1 = new Select(dob);
+        sel1.selectByValue("10");
 
+        // Handling dropdown with index
+        WebElement Dropdown1 = driver.findElement(By.id("dropdown"));
+        Select sel2 = new Select(Dropdown1);
+        sel2.selectByIndex(2);
+
+
+        Thread.sleep(2000);
         driver.quit();
+
+
     }
 }
 

@@ -22,7 +22,7 @@ public class ListenerTestCase2 implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
+    public void onTestFailure(ITestResult result) {   // this method contains the logic to take screenshot and generate report
         System.out.println("Test case " + result.getName() + " failed");
     }
 

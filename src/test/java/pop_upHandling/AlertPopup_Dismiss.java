@@ -1,6 +1,5 @@
 package pop_upHandling;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,8 +21,12 @@ public class AlertPopup_Dismiss {
         Thread.sleep(2000);
 
         // Switch to alert
-        Alert a = driver.switchTo().alert();
-        a.dismiss();
+        driver.switchTo().alert().dismiss();
+
+        String result = driver.findElement(By.id("result")).getText();
+
+        System.out.println("Result after clicking Cancel: " + result);
+        
 
         Thread.sleep(2000);
         driver.quit();
@@ -39,7 +42,6 @@ accept() → clicks OK
 
 dismiss() → clicks Cancel
 
-Alert alert = driver.switchTo().alert();
 
 // Click Cancel
 alert.dismiss();
