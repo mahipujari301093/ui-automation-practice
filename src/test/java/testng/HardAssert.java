@@ -20,7 +20,12 @@ public class HardAssert {
         boolean isTitleDisplayed = true;
         Assert.assertTrue(isTitleDisplayed);
 
+        
+
     }
+
+    
+
 
 }
 

@@ -79,28 +79,23 @@ public class AnnotationTestCase {
 
 /*
 🔹 Execution Flow Diagram
-Before Suite
-    ↓
-Before Test
-    ↓
-Before Class
-    ↓
-Before Method
-    ↓
-Test Case 1
-    ↓
-After Method
-    ↓
-Before Method
-    ↓
-Test Case 2
-    ↓
-After Method
-    ↓
-After Class
-    ↓
-After Test
-    ↓
-After Suite
+
+@BeforeSuite
+   ↓
+@BeforeTest
+   ↓
+@BeforeClass
+   ↓
+@BeforeMethod
+   ↓
+@Test
+   ↓
+@AfterMethod
+   ↓
+@AfterClass
+   ↓
+@AfterTest
+   ↓
+@AfterSuite
 
  */

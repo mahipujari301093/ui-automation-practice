@@ -15,8 +15,9 @@ public class IsDisplayed {
     WebDriver driver = new ChromeDriver();
     driver.manage().window().maximize();
     driver.get("https://www.amazon.in/");
-
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+    
     WebElement cart = driver.findElement(By.id("nav-cart"));
     boolean display  = cart.isDisplayed();
     System.out.println(display);
